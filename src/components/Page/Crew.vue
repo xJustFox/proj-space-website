@@ -5,10 +5,32 @@ export default {
     data() {
         return {
             crew: data.crew,
+            autoscroll: null,
             crewIndex: 0
         }
     },
+    created() {
+        this.autoScroll()
+    },
     methods: {
+        nextBtn(){
+            if (this.crewIndex == this.crew.length - 1) {
+                this.crewIndex = 0
+            } else {
+                this.crewIndex++
+            }
+        },
+        pauseScroll(){ 
+            clearInterval(this.autoscroll);
+            this.autoscroll = null;
+        },
+        autoScroll(){
+            if (this.autoscroll ==  null) {
+                this.autoscroll = setInterval(() => {
+                    this.nextBtn();  
+                }, 3000)
+            }
+        },
         getCrew(index){
             this.crewIndex = index
         }
@@ -19,7 +41,7 @@ export default {
 <template lang="">
     <main>
         <div class="container-sm my-pt-102">
-            <div class="row text-white">
+            <div class="row text-white" @mouseover="pauseScroll()" @mouseleave="autoScroll()">
                 <!-- Title -->
                 <div class="col-12">
                     <h3><span class="text-secondary fw-bold fs-2">03</span> SPACE LAUNCH 101</h3>
@@ -90,6 +112,10 @@ main{
                 }
             }
         }
+    }
+
+    &:hover{
+        cursor: default;
     }
 }
 </style>
