@@ -44,7 +44,7 @@ export default {
             <div class="row text-white" @mouseover="pauseScroll()" @mouseleave="autoScroll()">
                 <!-- Title -->
                 <div class="col-12">
-                    <h3><span class="text-secondary fw-bold fs-2">03</span> SPACE LAUNCH 101</h3>
+                    <h3><span class="text-secondary fw-bold fs-2">02</span> MEET YOUR CREW</h3>
                 </div>
                 <div class="col-6 position-relative">
                     <div class="d-flex flex-column justify-content-center h-100">
