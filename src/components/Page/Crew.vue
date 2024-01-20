@@ -61,7 +61,7 @@ export default {
 
                 </div>
                 <div class="col-6">
-                    <div class="d-flex align-items-end h-100">
+                    <div class="d-flex align-items-end justify-content-end h-100">
                         <img class="webpPerson" :src="crew[this.crewIndex].images.webp" alt="">
                     </div>
                 </div>
