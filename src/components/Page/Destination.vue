@@ -19,15 +19,17 @@ export default {
 
 <template lang="">
     <main>
-        <div class="container-sm my-pt-136">
-            <div class="row align-content-end h-100 text-white">
+        <div class="container-sm my-pt-102">
+            <div class="row text-white">
                 <!-- Title -->
                 <div class="col-12">
                     <h3><span class="text-secondary fw-bold fs-2 ">01</span> PICK YOUR DESTINATION</h3>
                 </div>
                 <!-- Planet -->
                 <div class="col-5">
-                    <img class="planet" :src="destination[this.planetIndex].images.webp" alt="">
+                    <figure class="m-0 p-0 d-flex justify-content-center align-items-center ">
+                        <img class="planet" :src="destination[this.planetIndex].images.webp" alt="">
+                    </figure>
                 </div>
                 <!-- Text Planet -->
                 <div class="col-7">
@@ -63,10 +65,9 @@ export default {
 
 main {
     background-image: url('../../assets/destination/background-destination-desktop.jpg');
-    .col-7,
-    .col-5{
-        height: calc(100% - 42px);
-        padding: 60px 0 0 0;
+
+    .col-12{
+        padding: 60px 0 100px 0;
     }
     .p-140{
         padding: 0 140px 0 140px;
@@ -82,6 +83,7 @@ main {
         &::after{
             content: '';
             width: 100%;
+            
             position: absolute;
             bottom: -10px;
             left: 0;
@@ -99,7 +101,11 @@ main {
     }  
     .planet{
         max-height: 442px;
-        transform: translate(110px, 170px);
+        &:hover{
+            transform: scale(1.2);
+            rotate: 360deg;
+            transition: 700ms;
+        }
     }
     
     .bottomText li{
@@ -113,6 +119,7 @@ main {
 
     .textBott{
         padding-top: 30px;
+        text-wrap: nowrap;
     }
 
 
