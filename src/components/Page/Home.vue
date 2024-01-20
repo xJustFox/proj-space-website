@@ -8,7 +8,7 @@ export default {
     <main>
         <div class="container-md h-100 my-pt-136">
             <div class="row h-100">
-                <div class="col-6 text-white d-flex flex-column justify-content-end my-pt">
+                <div class="col-5 text-white d-flex flex-column justify-content-end my-pt">
                     <div class="subTitle">SO, YOU WANT TO TRAVEL TO</div>
                     <div class="title">SPACE</div>
                     <p>
@@ -18,7 +18,7 @@ export default {
                         a truly out of this world experience!
                     </p>
                 </div>
-                <div class="col-6 my-pt position-relative ">
+                <div class="col-7 my-pt position-relative ">
                     <div class="circle" >
                         EXPLORE
                     </div>
@@ -34,30 +34,42 @@ main {
     background-image: url('../../assets/home/background-home-desktop.jpg');
     background-size: cover;
     height: 100vh;
+    overflow-y: hidden;
 
-    .my-pt{
+    .my-pt {
         padding-bottom: 100px;
     }
 
-    .subTitle{
+    .subTitle {
         font-size: 25px;
     }
 
-    .title{
+    .title {
         font-size: 120px;
         font-weight: 500;
         margin-bottom: 25px
     }
 
-    .circle{
+    p{
+        max-width: 420px;
+    }
+
+    .circle {
         position: absolute;
         bottom: 100px;
-        right: 0;
+        left: 40%;;
         font-size: 30px;
         font-weight: 600;
         border-radius: 100%;
-        padding: 100px 60px;
+        padding: 130px 80px;
         background-color: white;
+    }
+
+    .col-7,
+    .col-5{
+        &:hover{
+            cursor: default;
+        }
     }
 }
 </style>
