@@ -2,7 +2,7 @@
 Reference mockup taken from 'https://www.frontendmentor.io/'.
 
 #### Frameworks used:
-- Lives
+- Vite
 - Vue
 
 #### libraries used:
