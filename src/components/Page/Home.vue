@@ -6,17 +6,19 @@ export default {
 
 <template lang="">
     <main>
-        <div class="container-sm my-pt-136">
+        <div class="container-sm my-pt-102 my-pb-100">
             <div class="row h-100">
-                <div class="col-5 text-white d-flex flex-column justify-content-end">
-                    <div class="subTitle">SO, YOU WANT TO TRAVEL TO</div>
-                    <div class="title">SPACE</div>
-                    <p>
-                        Let's face it; if you want to go to space, you might as well
-                        genuinely go to outer space and not hover kind of on the
-                        edge of it. Well sit back, and relax because we'll give you
-                        a truly out of this world experience!
-                    </p>
+                <div class="col-5 text-white">
+                    <div class="d-flex flex-column justify-content-end h-100">
+                        <div class="subTitle">SO, YOU WANT TO TRAVEL TO</div>
+                        <div class="title">SPACE</div>
+                        <p>
+                            Let's face it; if you want to go to space, you might as well
+                            genuinely go to outer space and not hover kind of on the
+                            edge of it. Well sit back, and relax because we'll give you
+                            a truly out of this world experience!
+                        </p>
+                    </div>
                 </div>
                 <div class="col-7 position-relative ">
                     <div class="circle" >
