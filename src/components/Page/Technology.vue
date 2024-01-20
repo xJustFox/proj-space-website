@@ -6,7 +6,7 @@ export default {
 
 <template lang="">
     <main>
-        <div class="container-fluid my-pt-136">
+        <div class="container-sm my-pt-136">
             <div class="row">
                 <div class="col-6">
                     <h1>This is TECHNOLOGY</h1>
@@ -22,8 +22,6 @@ export default {
 
 <style lang="scss" scoped>
 main{
-    height: 100vh;
     background-image: url('../../assets/technology/background-technology-desktop.jpg');
-    background-size: cover;
 }
 </style>

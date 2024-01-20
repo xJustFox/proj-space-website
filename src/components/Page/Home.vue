@@ -6,9 +6,9 @@ export default {
 
 <template lang="">
     <main>
-        <div class="container-md h-100 my-pt-136">
+        <div class="container-sm my-pt-136">
             <div class="row h-100">
-                <div class="col-5 text-white d-flex flex-column justify-content-end my-pt">
+                <div class="col-5 text-white d-flex flex-column justify-content-end">
                     <div class="subTitle">SO, YOU WANT TO TRAVEL TO</div>
                     <div class="title">SPACE</div>
                     <p>
@@ -18,7 +18,7 @@ export default {
                         a truly out of this world experience!
                     </p>
                 </div>
-                <div class="col-7 my-pt position-relative ">
+                <div class="col-7 position-relative ">
                     <div class="circle" >
                         EXPLORE
                     </div>
@@ -32,13 +32,6 @@ export default {
 <style lang="scss" scoped>
 main {
     background-image: url('../../assets/home/background-home-desktop.jpg');
-    background-size: cover;
-    height: 100vh;
-    overflow-y: hidden;
-
-    .my-pt {
-        padding-bottom: 100px;
-    }
 
     .subTitle {
         font-size: 25px;
@@ -52,11 +45,13 @@ main {
 
     p{
         max-width: 420px;
+        font-size: 19px;
+        line-height: 35px;
     }
 
     .circle {
         position: absolute;
-        bottom: 100px;
+        bottom: 0;
         left: 40%;;
         font-size: 30px;
         font-weight: 600;

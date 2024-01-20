@@ -12,5 +12,15 @@ body{
 }
 
 .my-pt-136{
-    padding-top: 102px;
+    padding: 102px 0 100px 0 ;
+}
+
+main{
+    min-height: 100vh;
+    background-size: cover;
+    overflow-y: auto;
+
+    .container-sm{
+        height: 100vh;
+    }
 }
