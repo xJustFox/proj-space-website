@@ -51,6 +51,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 header{
     width: 100%;
     position: fixed;
@@ -66,7 +68,7 @@ header{
         position: absolute;
         top: 50%;
         left: 16%;
-        border-bottom: 2px solid rgb(35, 35, 35);
+        border-bottom: 2px solid $my_gray;
     }
     ul{
         padding-left: 5%;

@@ -54,7 +54,6 @@ main {
         bottom: 0;
         left: 40%;;
         font-size: 30px;
-        font-weight: 600;
         border-radius: 100%;
         padding: 130px 80px;
         background-color: white;
