@@ -122,7 +122,8 @@ main {
         text-wrap: nowrap;
     }
 
-
-
+    &:hover{
+        cursor: default;
+    }
 }
 </style>
