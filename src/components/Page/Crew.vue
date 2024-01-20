@@ -47,12 +47,15 @@ export default {
                     <h3><span class="text-secondary fw-bold fs-2">02</span> MEET YOUR CREW</h3>
                 </div>
                 <div class="col-6 position-relative">
+
+                    <!-- Texts -->
                     <div class="d-flex flex-column justify-content-center h-100">
                         <div class="role text-secondary">{{crew[this.crewIndex].role}}</div>
                         <div class="name">{{crew[this.crewIndex].name}}</div>
                         <div class="bio">{{crew[this.crewIndex].bio}}</div>
                     </div>
 
+                    <!-- Circle buttons -->
                     <div class="checkUser">
                         <span v-for="(item, index) in crew" :key="index">
                             <i class="fa-solid fa-circle" :class="this.crewIndex == index ? 'active' : ''" @click="getCrew(index)"></i>
@@ -60,6 +63,8 @@ export default {
                     </div>
 
                 </div>
+
+                <!-- Images -->
                 <div class="col-6">
                     <div class="d-flex align-items-end justify-content-end h-100">
                         <img class="webpPerson" :src="crew[this.crewIndex].images.webp" alt="">

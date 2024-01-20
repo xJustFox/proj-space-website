@@ -5,7 +5,13 @@ export default {
     name: 'Technology',
     data() {
         return {
-            tech: data.technology
+            tech: data.technology,
+            techIndex: 0
+        }
+    },
+    methods: {
+        getTech(index){
+            this.techIndex = index
         }
     },
 }
@@ -14,32 +20,37 @@ export default {
 <template lang="">
     <main>
         <div class="container-sm my-pt-102">
-            <div class="row text-white">
+            <div class="row align-content-start text-white">
                 <!-- Title -->
                 <div class="col-12">
                     <h3><span class="text-secondary fw-bold fs-2">03</span> SPACE LAUNCH 101</h3>
                 </div>
 
+                <!-- Buttons Number -->
                 <div class="col-1">
                     <div class="h-100 d-flex align-items-center">
                         <ul class="list-unstyled ">
                             <li v-for="(item, index) in tech" :key="index">
-                                <div class="circle"><span>{{index + 1}}</span></div>
+                                <div class="circle" :class="this.techIndex == index ? 'active' : ''" @click="getTech(index)"><span>{{index + 1}}</span></div>
                             </li>
                         </ul>
                     </div>
                 </div>
+
+                <!-- Texts -->
                 <div class="col-6">
                     <div class="h-100 d-flex flex-column justify-content-center my-pl">
                         <div class="subTitle">THE TERMINOLOGY ...</div>
-                        <div class="name">{{tech[0].name}}</div>
-                        <div class="text">{{tech[0].description}}</div>
+                        <div class="name">{{tech[this.techIndex].name}}</div>
+                        <div class="text">{{tech[this.techIndex].description}}</div>
                     </div>
                 </div>
+
+                <!-- Image -->
                 <div class="col-5">
-                    <div class="h-100 d-flex flex-column justify-content-center ">
-                        <img :src="tech[0].images.portrait" alt="">
-                    </div>
+                    <figure class="h-100 d-flex flex-column justify-content-center ">
+                        <img :src="tech[this.techIndex].images.portrait" alt="">
+                    </figure>
                 </div>
             </div>
         </div>
@@ -56,11 +67,19 @@ main{
     .row {
         height: calc(100vh - 102px);
         .col-12{
-            padding-top: 60px;
+            height: 102px;
+            padding: 60px 0;
         }
     
         ul li{
             padding-bottom: 40px;
+
+            .active{
+                background-color: white;
+                span{
+                    color: black;
+                }
+            }
             .circle{
                 width: 100px;
                 height: 100px;
@@ -77,9 +96,12 @@ main{
                     font-weight: 200;
                     font-size: 40px;
                 }
+
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
-    
         .name{
             text-wrap: nowrap;
             font-size: 70px;
@@ -87,6 +109,15 @@ main{
         .text{
             line-height: 35px;
         }  
+
+        img:hover{
+            transition: 300ms;
+            scale: 1.1;
+        }
+    }
+
+    &:hover{
+        cursor: default;
     }
 }
 </style>
