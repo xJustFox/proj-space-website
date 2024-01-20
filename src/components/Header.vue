@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         getActive(index){
-            return this.flagActive = index
+            this.flagActive = index
         }
     },
 }
