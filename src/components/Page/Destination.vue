@@ -106,6 +106,12 @@ main {
             rotate: 360deg;
             transition: 700ms;
         }
+
+        &:not(:hover){
+            transform: scale(1);
+            rotate: -360deg;
+            transition: 700ms;
+        }
     }
     
     .bottomText li{
