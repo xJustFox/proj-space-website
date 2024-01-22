@@ -93,12 +93,14 @@ header{
             }
             .check{
                 &::after{
+                    cursor: default;
                     content: '';
                     width: 100%;
                     position: absolute;
                     bottom: -29px;
                     left: 0;
                     border-bottom: 2px solid white;
+                    animation: loadingBar 0.5s ease;
                 }
             }
         }

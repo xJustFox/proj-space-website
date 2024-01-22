@@ -107,6 +107,7 @@ main{
                 padding-right: 30px;
                 
                 .active{
+                    scale: 1.6;
                     color: white;
                 }
                 i{

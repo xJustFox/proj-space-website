@@ -99,6 +99,10 @@ main{
 
                 &:hover{
                     cursor: pointer;
+                    scale: 1.1
+                }
+                &:not(:hover){
+                    scale: 1
                 }
             }
         }
@@ -113,6 +117,11 @@ main{
         img:hover{
             transition: 300ms;
             scale: 1.1;
+        }
+
+        img:not(:hover){
+            transition: 300ms;
+            scale: 1;
         }
     }
 

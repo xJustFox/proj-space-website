@@ -27,3 +27,9 @@ main{
         height: 100vh;
     }
 }
+
+
+@keyframes loadingBar {
+    from {width: 0;}
+    to {width: 100%;}
+}

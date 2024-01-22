@@ -81,13 +81,15 @@ main {
     }
     .check{
         &::after{
+            cursor: default;
             content: '';
             width: 100%;
-            
+            transition: width 2s;
             position: absolute;
             bottom: -10px;
             left: 0;
             border-bottom: 2px solid white;
+            animation: loadingBar 0.5s ease;
         }
     }
     .title{
